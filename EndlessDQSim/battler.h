@@ -2,14 +2,15 @@
 #include <iostream>
 #include <string>
 using namespace std;
+//All battlers can attack and defend.
+//All battlers have health, attack and a name.
 class Battler{
 public:
 	Battler();
-	Battler(string name, int health, int attack);
-	void attackOther(Battler enemy);
-	//void defend();
-//private:
-	int health;
-	int attack;
-	string name;
+	virtual void attackOther(Battler *enemy);
+	virtual void defendSelf();
+protected:
+ 	int health;
+ 	int attack;
+
 };
